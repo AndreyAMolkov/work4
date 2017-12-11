@@ -1,3 +1,24 @@
+#define SIZE 50
+#define M 200
+#include<stdio.h>
+int main()
+{
+	int i = 0,size=0;
+	char *str[SIZE];
+	char txt[SIZE][M] = { 0 };
+	char word = " ";
+	FILE *fp=fopen("fp.txt", "r");
+	FILE *fpFinal = fopen("fpFinal.txt", "w");
+	while ((str[i]=fgets(txt[i],M,fp))!=NULL)
+	{
+		i++;
+	}
+	lineSort(str, i);
+	printLinesToFile(str, i, fpFinal);
+	
+	return 0;
+}
+
 /*
 Написать программу, сортирующую строки (см. задачу 1), но использующую
 строки, прочитанные из текстового файла. Результат работы программы также

@@ -1,0 +1,4 @@
+﻿  task4.c
+c:\git\work4\1\4\task4.c(4): warning C4013: strlen: нет определения; предполагается "extern" с возвратом типа "int"
+c:\git\work4\1\4\task4.c(12): warning C4013: qsort: нет определения; предполагается "extern" с возвратом типа "int"
+  4.vcxproj -> C:\git\work4\1\Debug\4.exe
