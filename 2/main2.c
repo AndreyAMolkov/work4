@@ -3,19 +3,22 @@
 #define SIZE 100
 int main()
 {
-	int i = 0, j = 0;
+	int i = 0, j = 0,count=0;
 	char ch = " ";
-	char in[SIZE][SIZE] = { " " };
-	char *out[SIZE][SIZE];
+	//char buf[SIZE] = { 0 };
+	char in[SIZE] = {0};
+	char *out[SIZE] = {0};
 	printf("Enter line of word:\n");
 	
-	//in = gets(buf, SIZE, stdout);
-	char *buf=reverseWords(in, out);
+	gets(in, SIZE, stdin);
+
+	reverseWords(in, out);
 	//while ((word =**(out + i)) != NULL)
 	//{
-		while ((ch = *(out + 1) + j) != '\0')
+		while (out[j] != '\0')
 		{
-			printf("%c", ch);
+			fputs(out[j], stdout);
+			fputs(" ", stdout);
 			j++;
 		}
 	//}

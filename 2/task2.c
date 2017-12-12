@@ -2,22 +2,51 @@
 #include<stdlib.h>
 #include<stdio.h>
 #include<string.h>
-char *reverseWords(char *in, char *out)
+#define OUT 0
+#define IN 1
+char *reverseWords(char *in, char *out[SIZE])
 {
-	int i = 0,j=0,len=0;
+	int i = 0,j=0,len=0,count=0,inWord=OUT;
 	char ch = " ";
-	while (in[i]!='\0')
+	while ( (ch=*(in + i)) != '\0')
 	{
-		i+=SIZE;
+		if (ch == ' ')
+		{
+			*(in+i) = '\0';
+			inWord = OUT;
+		}
+		else
+		{
+			inWord++;
+			if (inWord == 1)
+				len++;
+		}
+		
+		i++;
 	}
-	while (i>=0)
-	{
-		out[j] = &in[i];
-		;
-		i-=SIZE;
-		j++;
+	*(out + len) = '\0';
+	len--;
+	j = i - 1;
 
+	i = 0;
+	inWord = 0;
+
+	while (i<=j)
+	{
+		if (in[i]!='\0')
+		{
+			inWord++;
+			if (inWord == 1)
+			{
+				out[len] = &in[i];
+				len--;
+			}
+		}
+		else
+			inWord = OUT;
+		
+		i++;
+		
 	}
-	
 	return out;
 }
