@@ -1,7 +1,7 @@
 #include<stdio.h>
 compare(const void *a, const void *b)
 {
-	if (strlen(*(char **)a) <strlen(*(char **)b))
+	if (strlen(*(char **)a) <strlen(*(char **)b))//base function for quick sort
 		return 1;
 	else
 		return-1;
@@ -9,7 +9,7 @@ compare(const void *a, const void *b)
 
 void lineSort(char *str[], int size)
 {
-		qsort(str, size, sizeof(str), compare);
+		qsort(str, size, sizeof(str), compare);//the base function for quick sort
 }
 void printLinesToFile(const char *str[], int size, FILE *fp)
 {

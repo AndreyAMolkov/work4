@@ -5,70 +5,62 @@
 #include<string.h>
 int main()
 {
-	int i = 0, j = 0, number = 0,age=0,maxAge=0,minAge=900,k=0,z=0;
+	int i = 0, j = 0, number = 0, age = 0, maxAge = 0, minAge = 900, k = 0, z = 0, len = 0,a=0;
 	char list[SIZE][N] = {' '};
-	char Name[SIZE] = { 0 };
-	char *pName;
+	char Name[SIZE][N] = { ' ' };
+	char *pName[2];
 	char *word[SIZE] = { ' ' };
 	char ch = ' ';
-	printf("Enter quantity person' your relativels: ");
-	fgets(word,2,stdin);
-	number = atoi(word);
+	printf("Haw many relatives in your family: ");
+	fgets(word,SIZE,stdin);//record string in array word
+	number = atoi(word);// change the letter to number
 	fflush(stdin);
-	//number = ch-'0';
-	i = 1;
-	while (i<=number)
-	{
-		printf("\nEnter %i person' your relativels: ",i);
-		fgets(list[i], 20, stdin);
 
-		while (j<strlen(list[i]))
+	i = 0;
+	while (i<number)// condition is - if less number of family
+	{
+		printf("\nEnter name %i person of your family and his age: ",i+1);
+		fgets(list[i], SIZE, stdin);
+		len = strlen(list[i]) - 1;// count number of symbols
+			list[i][len] = '\0';
+			j = 0;
+			z = 0;
+		while (j<len)
 		{
-			if (((ch= list[i][z]) >= '0') && (ch <= '9'))
+			ch = list[i][z];
+			if ((ch >= '0') && (ch <= '9'))// check symbols and if it's the number then collect age and record its in "age"
 			{
 				age = age * 10 + (ch - '0');
 
-			} else if (ch!=' ')
+			} else if (ch!=' ')// check symbols and if its the letter then collect name and record it's in array[][] "Name"
 			{
-				
-				Name[k] = ch;
+				Name[a][k] = ch;
 					k++;
 			}
 			j++;
 			z++;
 		}
-		Name[k] = '\0';
-		if (age > maxAge)
-			pName[1] = Name;
-		if(age < minAge)
-			pName[0] = Name;
+		Name[a][k] = '\0';
+		if (age > maxAge)// check max age
+		{
+			pName[1] = &Name[a];
+			maxAge = age;
+		}
+
+		if (age < minAge)// check min age
+		{
+			pName[0] = &Name[a];
+			minAge = age;
+		}
 		k = 0;
-		age = 0;i++;
-		fflush(stdin);
+		age = 0;
+		i++;
+		a++;
+		fflush(stdin);// to clear memory for next enter
 	}
-	printf("Old is : %s\n", pName[1]);
-	printf("Yong is : %s\n", pName[0]);
+	printf("\n\nThe oldest in your family is : %s\n", pName[1]);
+	printf("The yongest in your family is : %s\n", pName[0]);
 
 	return 0;
 }
 
-/* Написать программу, которая запрашивает количество родственников в семье,
-   а потом позволяет ввести имя родственника и его возраст. Программа должна
-   определить самого молодого и самого старого родственника и вывести их имена
-Пояснение
-
-Нужно завести массив строк для хранения имён и два указателя: young и old,
-которые по мере ввода, связывать с нужными строками.
-Также необходимы три числовые переменные для:
-
-Ввода текущего возраста
-Хранения максимального возраста
-Хранения минимального возраста
-Состав
-
-Программа должна состоять из функций:
-
-    - main()
-Файлы: main5.c.
-
-*/

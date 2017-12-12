@@ -14,30 +14,7 @@ int main()
 	
 	while (flagEnt != END)
 	{
-		ch = getc(stdin);
-		if (ch != '\n' && flagEnt == OUT)
-		{
-			buf[j][i] = ch;
-			i++;
-			continue;
-		}
 		
-		if (ch == '\n' && flagEnt == OUT)
-		{
-			flagEnt = IN;
-			buf[j][i] = '\0';
-		}
-		if (ch != "\n" && flagEnt == IN)// make string in buf after new line
-		{
-			i = 0;
-			flagEnt = OUT;
-			buf[j][i] = ch;
-		}
-		if ((ch == '\n') && (flagEnt = IN))
-		{
-			flagEnt = END;
-		}
-	
 		;
 
 

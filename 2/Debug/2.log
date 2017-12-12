@@ -1,5 +1,9 @@
 ﻿  task2.c
 c:\git\work4\2\task2.c(8): warning C4028: формальный параметр 2 отличается от объявления
-c:\git\work4\2\task2.c(51): warning C4047: return: "char *" отличается по уровням косвенного обращения от "char **"
+c:\git\work4\2\task2.c(46): warning C4047: return: "char *" отличается по уровням косвенного обращения от "char **"
 c:\git\work4\2\task2.c(10): warning C4047: инициализация: "char" отличается по уровням косвенного обращения от "char [2]"
+  main2.c
+c:\git\work4\2\main2.c(10): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
+c:\git\work4\2\main2.c(11): warning C4013: reverseWords: нет определения; предполагается "extern" с возвратом типа "int"
+  Создание кода...
   2.vcxproj -> C:\git\work4\1\Debug\2.exe

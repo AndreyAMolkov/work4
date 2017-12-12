@@ -8,45 +8,40 @@ char *reverseWords(char *in, char *out[SIZE])
 {
 	int i = 0,j=0,len=0,count=0,inWord=OUT;
 	char ch = " ";
-	while ( (ch=*(in + i)) != '\0')
+	while ( (ch=*(in + i)) != '\0')// count number of Symbol
 	{
 		if (ch == ' ')
 		{
-			*(in+i) = '\0';
+			*(in+i) = '\0';//replace every gap to '\0' for  ease work with pointers
 			inWord = OUT;
 		}
 		else
 		{
 			inWord++;
 			if (inWord == 1)
-				len++;
+				len++;// count number of word
 		}
-		
 		i++;
 	}
-	*(out + len) = '\0';
+	*(out + len) = '\0';// replace the last string in array 'out' for ease work
 	len--;
 	j = i - 1;
-
 	i = 0;
 	inWord = 0;
-
-	while (i<=j)
+	while (i<=j)//collect an array of pointers in reveerse order
 	{
 		if (in[i]!='\0')
 		{
 			inWord++;
 			if (inWord == 1)
 			{
-				out[len] = &in[i];
+				out[len] = &in[i];//the  first of letter each word = pointer
 				len--;
 			}
 		}
 		else
 			inWord = OUT;
-		
-		i++;
-		
+		i++;	
 	}
 	return out;
 }
