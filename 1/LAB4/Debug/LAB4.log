@@ -1,6 +1,2 @@
 ﻿  task1.c
-c:\git\clab4\1\lab4\task1.c(10): warning C4098: compare: функция типа "void", возвращающая значение
-c:\git\clab4\1\lab4\task1.c(13): warning C4098: compare: функция типа "void", возвращающая значение
-c:\git\clab4\1\lab4\task1.c(17): warning C4133: функция: несовместимые типы - из "void (__cdecl *)(const void *,const void *)" в "int (__cdecl *)(const void *,const void *)"
-  LAB4.vcxproj -> C:\git\clab4\1\Debug\LAB4.exe
-  LAB4.vcxproj -> C:\git\clab4\1\Debug\LAB4.pdb (Full PDB)
+c:\git\clab4\1\lab4\task1.c(1): fatal error C1083: Не удается открыть файл включение: task4.h: No such file or directory

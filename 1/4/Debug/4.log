@@ -1,4 +1,15 @@
-﻿  task4.c
-c:\git\work4\1\4\task4.c(4): warning C4013: strlen: нет определения; предполагается "extern" с возвратом типа "int"
-c:\git\work4\1\4\task4.c(12): warning C4013: qsort: нет определения; предполагается "extern" с возвратом типа "int"
-  4.vcxproj -> C:\git\work4\1\Debug\4.exe
+﻿  main4.c
+c:\git\clab4\1\4\main4.c(16): warning C4013: lineSort: нет определения; предполагается "extern" с возвратом типа "int"
+c:\git\clab4\1\4\main4.c(17): warning C4013: printLinesToFile: нет определения; предполагается "extern" с возвратом типа "int"
+c:\git\clab4\1\4\main4.c(9): warning C4047: инициализация: "char" отличается по уровням косвенного обращения от "char [2]"
+c:\git\clab4\1\4\main4.c(10): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note:  см. объявление "fopen"
+c:\git\clab4\1\4\main4.c(11): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note:  см. объявление "fopen"
+  task1.c
+c:\git\clab4\1\lab4\task1.c(10): warning C4098: compare: функция типа "void", возвращающая значение
+c:\git\clab4\1\lab4\task1.c(13): warning C4098: compare: функция типа "void", возвращающая значение
+c:\git\clab4\1\lab4\task1.c(17): warning C4133: функция: несовместимые типы - из "void (__cdecl *)(const void *,const void *)" в "int (__cdecl *)(const void *,const void *)"
+  Создание кода...
+main4.obj : error LNK2019: ссылка на неразрешенный внешний символ _printLinesToFile в функции _main
+C:\git\clab4\1\Debug\4.exe : fatal error LNK1120: неразрешенных внешних элементов: 1

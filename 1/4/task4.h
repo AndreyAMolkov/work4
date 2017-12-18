@@ -1,4 +1,4 @@
-
+#include "task1.c"
 #include<stdio.h>
 #define SIZE 50
 void lineSort(char *str[], int size);
