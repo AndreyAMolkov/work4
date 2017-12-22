@@ -1,4 +1,5 @@
 ﻿  task1.c
+<<<<<<< HEAD
 c:\git\work4\1\lab4\task1.c(10): warning C4098: compare: функция типа "void", возвращающая значение
 c:\git\work4\1\lab4\task1.c(13): warning C4098: compare: функция типа "void", возвращающая значение
 c:\git\work4\1\lab4\task1.c(17): warning C4133: функция: несовместимые типы - из "void (__cdecl *)(const void *,const void *)" в "int (__cdecl *)(const void *,const void *)"
@@ -8,3 +9,6 @@ c:\git\work4\1\lab4\main1.c(30): warning C4013: printLines: нет опреде�
 c:\git\work4\1\lab4\main1.c(12): warning C4101: ch: неиспользованная локальная переменная
   Создание кода...
   LAB4.vcxproj -> C:\git\work4\1\Debug\LAB4.exe
+=======
+c:\git\clab4\1\lab4\task1.c(1): fatal error C1083: Не удается открыть файл включение: task4.h: No such file or directory
+>>>>>>> c1a2aaa41f0f8ca3ad4cf9486339ebe6feecb297

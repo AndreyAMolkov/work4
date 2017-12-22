@@ -21,7 +21,7 @@
     <ClCompile Include="main4.c">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="task4.c">
+    <ClCompile Include="..\LAB4\task1.c">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
   </ItemGroup>

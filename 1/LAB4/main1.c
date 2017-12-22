@@ -1,3 +1,4 @@
+#include "task1.c"
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
