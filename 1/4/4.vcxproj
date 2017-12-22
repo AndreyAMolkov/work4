@@ -142,6 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\LAB4\task1.c" />
     <ClCompile Include="main4.c" />
     <ClCompile Include="task4.c" />
   </ItemGroup>

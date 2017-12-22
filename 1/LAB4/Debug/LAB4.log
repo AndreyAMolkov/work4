@@ -1,6 +1,10 @@
 ﻿  task1.c
-c:\git\clab4\1\lab4\task1.c(10): warning C4098: compare: функция типа "void", возвращающая значение
-c:\git\clab4\1\lab4\task1.c(13): warning C4098: compare: функция типа "void", возвращающая значение
-c:\git\clab4\1\lab4\task1.c(17): warning C4133: функция: несовместимые типы - из "void (__cdecl *)(const void *,const void *)" в "int (__cdecl *)(const void *,const void *)"
-  LAB4.vcxproj -> C:\git\clab4\1\Debug\LAB4.exe
-  LAB4.vcxproj -> C:\git\clab4\1\Debug\LAB4.pdb (Full PDB)
+c:\git\work4\1\lab4\task1.c(10): warning C4098: compare: функция типа "void", возвращающая значение
+c:\git\work4\1\lab4\task1.c(13): warning C4098: compare: функция типа "void", возвращающая значение
+c:\git\work4\1\lab4\task1.c(17): warning C4133: функция: несовместимые типы - из "void (__cdecl *)(const void *,const void *)" в "int (__cdecl *)(const void *,const void *)"
+  main1.c
+c:\git\work4\1\lab4\main1.c(29): warning C4013: lineSort: нет определения; предполагается "extern" с возвратом типа "int"
+c:\git\work4\1\lab4\main1.c(30): warning C4013: printLines: нет определения; предполагается "extern" с возвратом типа "int"
+c:\git\work4\1\lab4\main1.c(12): warning C4101: ch: неиспользованная локальная переменная
+  Создание кода...
+  LAB4.vcxproj -> C:\git\work4\1\Debug\LAB4.exe

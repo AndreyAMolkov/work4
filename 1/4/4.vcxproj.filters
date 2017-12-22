@@ -15,6 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\LAB4\task1.c">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
     <ClCompile Include="main4.c">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>

@@ -4,7 +4,7 @@
 #include<string.h>
 #define OUT 0
 #define IN 1
-char *reverseWords(char *in, char *out[SIZE])
+char *reverseWords(char *in, char *out)
 {
 	int i = 0,j=0,len=0,count=0,inWord=OUT;
 	char ch = " ";
@@ -43,5 +43,20 @@ char *reverseWords(char *in, char *out[SIZE])
 			inWord = OUT;
 		i++;	
 	}
+	j = 0;
+	while (out[j] != NULL)//print result
+	{
+		fputs(out[j], stdout);
+		fputs(" ", stdout);
+		j++;
+	}
+	size = j - 1;
+	
+	
 	return out;
+}
+void printLines(const char *str[SIZE], int size)
+{
+	
+
 }
