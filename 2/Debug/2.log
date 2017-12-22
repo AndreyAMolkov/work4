@@ -1,4 +1,4 @@
-﻿  main2.c
-c:\git\work4\2\main2.c(10): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
-c:\git\work4\2\main2.c(11): warning C4013: reverseWords: нет определения; предполагается "extern" с возвратом типа "int"
+﻿  task2.c
+c:\git\work4\2\task2.c(51): warning C4047: !=: "int" отличается по уровням косвенного обращения от "void *"
+c:\git\work4\2\task2.c(11): warning C4047: инициализация: "char" отличается по уровням косвенного обращения от "char [2]"
   2.vcxproj -> C:\git\work4\1\Debug\2.exe

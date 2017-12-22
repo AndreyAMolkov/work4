@@ -7,12 +7,14 @@
 char *reverseWords(char *in, char *out)
 {
 	int i = 0,j=0,len=0,count=0,inWord=OUT;
+	char *p[SIZE];
 	char ch = " ";
-	while ( (ch=*(in + i)) != '\0')// count number of Symbol
+	int k = 0;
+	while ( (ch=in[i]) != '\0')// count number of Symbol
 	{
-		if (ch == ' ')
+		if (ch == ' '|| ch=='\n')
 		{
-			*(in+i) = '\0';//replace every gap to '\0' for  ease work with pointers
+			in[i] = '\0';//replace every gap to '\0' for  ease work with pointers
 			inWord = OUT;
 		}
 		else
@@ -23,7 +25,7 @@ char *reverseWords(char *in, char *out)
 		}
 		i++;
 	}
-	*(out + len) = '\0';// replace the last string in array 'out' for ease work
+	p[len] = '\0';// replace the last string in array 'out' for ease work
 	len--;
 	j = i - 1;
 	i = 0;
@@ -35,7 +37,7 @@ char *reverseWords(char *in, char *out)
 			inWord++;
 			if (inWord == 1)
 			{
-				out[len] = &in[i];//the  first of letter each word = pointer
+				p[len] = &in[i];//the  first of letter each word = pointer
 				len--;
 			}
 		}
@@ -43,19 +45,20 @@ char *reverseWords(char *in, char *out)
 			inWord = OUT;
 		i++;	
 	}
-	j = 0;
-	while (out[j] != NULL)//print result
+	
+	for (i = 0, j = 0;p[i] != NULL;i++)//create the 'out'
 	{
-		fputs(out[j], stdout);
-		fputs(" ", stdout);
-		j++;
+		for (j = 0;(out[k] = (*(p + i))[j] )!= NULL;k++, j++);
+		
+		out[k++] = ' ';
+		
 	}
-	size = j - 1;
+	out[--k] = '\0';
 	
 	
 	return out;
 }
-void printLines(const char *str[SIZE], int size)
+void printLines(const char str[SIZE], int size)
 {
 	
 
